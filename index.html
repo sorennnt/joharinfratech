@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Johar InfraTech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    /* Reset & base styling */
     * {
       margin: 0;
       padding: 0;
@@ -17,19 +16,19 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
-      color: #333;
+      background: linear-gradient(to top right, #111927, #2c3e50);
+      color: #f4f4f4;
       line-height: 1.6;
     }
 
     header {
       height: 100vh;
-      background: linear-gradient(to right, #7b1fa2, #2196f3);
+      background: linear-gradient(to right, #141E30, #243B55);
       color: white;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       text-align: center;
       padding: 2rem;
       position: relative;
@@ -37,35 +36,49 @@
     }
 
     header h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
-      margin-bottom: 1rem;
-      white-space: nowrap;
-      border-right: 3px solid white;
-      overflow: hidden;
-      width: 0;
-      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+      position: relative;
+      animation: glitch 2s infinite;
     }
 
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 2px #ff00c8, -2px -2px #00ffe1;
+      }
+      20% {
+        text-shadow: -2px 2px #ff00c8, 2px -2px #00ffe1;
+      }
+      40% {
+        text-shadow: 2px -2px #ff00c8, -2px 2px #00ffe1;
+      }
+      60% {
+        text-shadow: -2px -2px #ff00c8, 2px 2px #00ffe1;
+      }
+      80% {
+        text-shadow: 2px 2px #ff00c8, -2px -2px #00ffe1;
+      }
+      100% {
+        text-shadow: none;
+      }
     }
 
     header p {
       font-size: 1.3rem;
-      opacity: 0;
-      animation: fadeIn 2s ease-in forwards;
-      animation-delay: 3s;
+      opacity: 0.9;
+      margin-top: 1rem;
+    }
+
+    .hero-img {
+      max-width: 500px;
+      margin-top: 2rem;
+      opacity: 0.95;
     }
 
     .btn {
       margin-top: 2rem;
       background: #fff;
-      color: #7b1fa2;
+      color: #243B55;
       padding: 0.8rem 1.5rem;
       font-weight: bold;
       border: none;
@@ -76,24 +89,17 @@
     }
 
     .btn:hover {
-      background: #f1f1f1;
+      background: #f0f0f0;
     }
 
     section {
       padding: 3rem 1rem;
       max-width: 1000px;
       margin: auto;
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeUp 1s forwards;
     }
 
-    section:nth-of-type(2) { animation-delay: 1s; }
-    section:nth-of-type(3) { animation-delay: 2s; }
-    section:nth-of-type(4) { animation-delay: 3s; }
-
     h2 {
-      color: #6a1b9a;
+      color: #00c6ff;
       margin-bottom: 1rem;
     }
 
@@ -106,15 +112,15 @@
     }
 
     footer {
-      background: #1c1c1c;
-      color: #bbb;
+      background: #111;
+      color: #aaa;
       text-align: center;
       padding: 1.5rem;
       font-size: 0.9rem;
     }
 
     .contact a {
-      color: #0073e6;
+      color: #00c6ff;
       text-decoration: none;
     }
 
@@ -124,25 +130,12 @@
       vertical-align: middle;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0 }
-      to { opacity: 1 }
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
       }
-
-      header p {
-        font-size: 1rem;
+      .hero-img {
+        width: 90%;
       }
     }
   </style>
@@ -152,13 +145,14 @@
   <header>
     <h1>Johar InfraTech</h1>
     <p>Empowering Web3 & Compute Innovation</p>
+    <img class="hero-img" src="https://cdn.pixabay.com/photo/2022/08/26/05/34/technology-7412576_960_720.png" alt="AI Compute Illustration"/>
     <a href="#about" class="btn">Explore More</a>
   </header>
 
   <section id="about">
     <h2><span class="icon" data-lucide="info"></span> About Us</h2>
     <p>
-      Johar InfraTech is a technology-driven MSME based in India. We specialize in running compute nodes for global decentralized networks like Gensyn, Drosera, and Aztec. Our mission is to provide reliable compute services for AI/ML research and Web3 innovation.
+      Johar InfraTech is a tech-focused MSME in India. We run compute nodes for decentralized platforms like Gensyn, Aztec, and Drosera. Our aim is to power AI/ML development and Web3 innovations with reliable infrastructure.
     </p>
   </section>
 
@@ -167,7 +161,7 @@
     <ul>
       <li>⚙️ Node Infrastructure (Gensyn, Aztec, Drosera, Blockcast)</li>
       <li>🚀 Compute Power Rentals (Coming Soon)</li>
-      <li>🔗 Web3 & AI Project Hosting</li>
+      <li>🧠 Web3 & AI Project Hosting</li>
     </ul>
   </section>
 
@@ -187,6 +181,7 @@
 
 </body>
 </html>
+
 
 
 
