@@ -12,10 +12,25 @@
       color: #333;
     }
     header {
-      background: #0073e6;
-      color: #fff;
-      padding: 1.5rem 2rem;
+      position: relative;
       text-align: center;
+      color: #fff;
+    }
+    header::before {
+      content: "";
+      background: url('hero-bg.png') no-repeat center center/cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.5;
+      z-index: 1;
+    }
+    header > div {
+      position: relative;
+      z-index: 2;
+      padding: 4rem 2rem;
     }
     section {
       padding: 2rem;
@@ -39,8 +54,10 @@
 </head>
 <body>
   <header>
-    <h1>Johar InfraTech</h1>
-    <p>Empowering Web3 & Compute Innovation</p>
+    <div>
+      <h1>Johar InfraTech</h1>
+      <p>Empowering Web3 & Compute Innovation</p>
+    </div>
   </header>
 
   <section>
@@ -54,19 +71,4 @@
     <h2>Services</h2>
     <ul>
       <li>Node Infrastructure (Gensyn, Aztec, Blockcast, Drosera)</li>
-      <li>Compute Power Rental (Coming Soon)</li>
-      <li>Web3 and AI Project Support</li>
-    </ul>
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:info@joharinfratech.in">info@joharinfratech.in</a></p>
-    <p>Telegram: N/A</p>
-  </section>
-
-  <footer>
-    <p>MSME Registered • Copyright © 2025 Johar InfraTech</p>
-  </footer>
-</body>
-</html>
+      <li>Comp
