@@ -2,147 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Johar InfraTech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+      color: #fff;
+      line-height: 1.6;
     }
-
+    nav {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #00c6ff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
     header {
       height: 90vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 2rem;
-      animation: fadeIn 1.5s ease-in;
     }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     header h1 {
-      font-size: 3rem;
-      font-weight: 700;
+      font-size: 3.5rem;
     }
-
     header p {
-      font-size: 1.3rem;
-      opacity: 0.9;
+      font-size: 1.4rem;
       margin-top: 1rem;
+      opacity: 0.9;
     }
-
-    .btn {
-      margin-top: 2rem;
-      background: #ffffff;
-      color: #2c5364;
-      padding: 0.8rem 1.5rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background: #f0f0f0;
-    }
-
     section {
-      padding: 3rem 1rem;
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
-
     h2 {
       color: #00c6ff;
       margin-bottom: 1rem;
     }
-
-    ul {
-      padding-left: 1.2rem;
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 1rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
     footer {
+      text-align: center;
+      padding: 2rem;
       background: #0d1b2a;
       color: #ccc;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
     }
-
     .contact a {
       color: #00c6ff;
       text-decoration: none;
     }
-
-    .icon {
-      display: inline-block;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
   </style>
 </head>
 <body>
+  <nav>
+    <div><strong>Johar InfraTech</strong></div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <header>
-    <h1>Johar InfraTech</h1>
-    <p>Empowering Web3 & Compute Innovation</p>
-    <a href="#about" class="btn">Learn More</a>
+  <header id="home">
+    <div>
+      <h1>Empowering Web3 & Compute Innovation</h1>
+      <p>Reliable infrastructure for global decentralized networks.</p>
+    </div>
   </header>
 
   <section id="about">
-    <h2><span class="icon" data-lucide="info"></span> About Us</h2>
-    <p>
-      Johar InfraTech is a registered MSME in India specializing in node infrastructure and compute services. We support global decentralized networks like Gensyn, Aztec, Drosera, and Blockcast, and enable scalable AI/ML & Web3 deployment.
-    </p>
+    <h2>About Us</h2>
+    <div class="card">
+      <p>Johar InfraTech is a registered MSME in India. We specialize in compute infrastructure, supporting global networks such as Gensyn, Aztec, Drosera, and Blockcast. Our goal is to provide scalable, reliable services for AI, ML, and Web3 applications.</p>
+    </div>
   </section>
 
-  <section>
-    <h2><span class="icon" data-lucide="server"></span> Services</h2>
-    <ul>
-      <li>⚙️ Node Infrastructure (Gensyn, Aztec, Drosera, Blockcast)</li>
-      <li>🚀 Compute Power Rentals (Coming Soon)</li>
-      <li>🧠 AI/ML Support & Web3 Integration</li>
-    </ul>
+  <section id="services">
+    <h2>Services</h2>
+    <div class="card">
+      <ul>
+        <li>Node Infrastructure Deployment (Gensyn, Aztec, Drosera)</li>
+        <li>Compute Power Rental (Coming Soon)</li>
+        <li>Web3/AI Project Support</li>
+        <li>Consultation for Distributed Compute</li>
+      </ul>
+    </div>
   </section>
 
-  <section class="contact">
-    <h2><span class="icon" data-lucide="mail"></span> Contact</h2>
-    <p>Email: <a href="mailto:info@joharinfratech.in">info@joharinfratech.in</a></p>
-    <p>Telegram: N/A</p>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <p>We currently run compute and node services for Gensyn, Drosera, and Aztec mainnet tasks. We also actively participate in Web3 testnets, bounty programs, and ecosystem support initiatives.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:info@joharinfratech.in">info@joharinfratech.in</a></p>
+      <p>Telegram: N/A</p>
+    </div>
   </section>
 
   <footer>
@@ -152,7 +135,6 @@
   <script>
     lucide.createIcons();
   </script>
-
 </body>
 </html>
 
