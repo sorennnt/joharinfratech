@@ -3,109 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Johar InfraTech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Johar InfraTech | Decentralized Compute & Web3 Infrastructure</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #090e2c, #161f4e);
+      color: #e4e4e4;
+      line-height: 1.7;
       overflow-x: hidden;
-      animation: fadeIn 2s ease-in;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    a {
+      color: #00b4d8;
+      text-decoration: none;
     }
     nav {
-      background: #0d1b2a;
+      background: #0d1117;
       padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
     nav a {
-      color: #00c6ff;
       margin-left: 1rem;
-      text-decoration: none;
-      font-weight: 500;
+      color: #00b4d8;
+      font-weight: bold;
       transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #66d9ff;
+      color: #90e0ef;
     }
     header {
-      height: 90vh;
+      height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      background: radial-gradient(circle, #1a237e 0%, #0d47a1 100%);
       text-align: center;
-      padding: 2rem;
-      background: linear-gradient(to top left, #1a2a6c, #b21f1f, #fdbb2d);
-      background-size: 400% 400%;
-      animation: gradientMove 15s ease infinite;
-    }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      padding: 0 2rem;
+      position: relative;
+      color: white;
     }
     header h1 {
-      font-size: 3.5rem;
-      animation: slideUp 1s ease forwards;
-    }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      font-size: 4rem;
+      font-family: 'Orbitron', sans-serif;
+      animation: fadeInDown 1s ease forwards;
     }
     header p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-top: 1rem;
-      opacity: 0.9;
-      animation: fadeIn 2s ease-in 0.5s forwards;
+      animation: fadeInUp 1.2s ease forwards;
     }
-    section {
+    .highlight {
+      color: #90e0ef;
+      font-weight: bold;
+    }
+    .section {
       padding: 4rem 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
-    h2 {
-      color: #00c6ff;
-      margin-bottom: 1rem;
-      border-left: 4px solid #00c6ff;
-      padding-left: 1rem;
-    }
     .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 12px;
+      background: #1c1c2c;
       padding: 2rem;
-      margin: 1rem 0;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-bottom: 2rem;
+      transition: transform 0.3s;
     }
     .card:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #00b4d8;
+      border-left: 5px solid #00b4d8;
+      padding-left: 1rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .features .card {
+      background: #21263b;
     }
     footer {
+      background: #111;
       text-align: center;
       padding: 2rem;
-      background: #0d1b2a;
       color: #ccc;
     }
-    .contact a {
-      color: #00c6ff;
-      text-decoration: none;
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -122,53 +129,57 @@
   </nav>
 
   <header id="home">
-    <div>
-      <h1>Empowering Web3 & Compute Innovation</h1>
-      <p>Reliable infrastructure for global decentralized networks.</p>
-    </div>
+    <h1>Johar InfraTech</h1>
+    <p>Empowering <span class="highlight">AI</span> & <span class="highlight">Web3</span> with Decentralized Compute</p>
   </header>
 
-  <section id="about">
+  <section id="about" class="section">
     <h2>About Us</h2>
     <div class="card">
-      <p>Johar InfraTech is a registered MSME in India. We specialize in compute infrastructure, supporting global networks such as Gensyn, Aztec, Drosera, and Blockcast. Our goal is to provide scalable, reliable services for AI, ML, and Web3 applications.</p>
+      <p>Johar InfraTech is an MSME-registered tech company in India specializing in compute node infrastructure for global decentralized protocols like Gensyn, Aztec, and Drosera. We're here to make the decentralized web a reality.</p>
     </div>
   </section>
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="card">
-      <ul>
-        <li>Node Infrastructure Deployment (Gensyn, Aztec, Drosera)</li>
-        <li>Compute Power Rental (Coming Soon)</li>
-        <li>Web3/AI Project Support</li>
-        <li>Consultation for Distributed Compute</li>
-      </ul>
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="features">
+      <div class="card">
+        <h3>Compute Nodes</h3>
+        <p>We run GPU-powered nodes for high-throughput AI & Web3 networks like Gensyn and Drosera.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud Infra</h3>
+        <p>Custom VPS and bare-metal compute rental service (coming soon).</p>
+      </div>
+      <div class="card">
+        <h3>Web3 Tech Support</h3>
+        <p>Get hands-on help with protocol deployments and network participation.</p>
+      </div>
+      <div class="card">
+        <h3>AI Research Lab</h3>
+        <p>Run experiments in ML models and training using high-efficiency infrastructure.</p>
+      </div>
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="card">
-      <p>We currently run compute and node services for Gensyn, Drosera, and Aztec mainnet tasks. We also actively participate in Web3 testnets, bounty programs, and ecosystem support initiatives.</p>
+      <p>We contribute to testnets and mainnet tasks across ecosystems including Aztec3, Blockcast, and others, aiming for sustainable, verifiable, and performance-centric participation.</p>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
     <div class="card">
       <p>Email: <a href="mailto:info@joharinfratech.in">info@joharinfratech.in</a></p>
-      <p>Telegram: N/A</p>
+      <p>Telegram: <em>Coming Soon</em></p>
     </div>
   </section>
 
   <footer>
-    <p>MSME Registered • Copyright © 2025 Johar InfraTech</p>
+    <p>© 2025 Johar InfraTech • MSME Registered • info@joharinfratech.in</p>
   </footer>
-
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 </html>
 
