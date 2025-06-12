@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Johar InfraTech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     * {
@@ -16,51 +16,35 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to top right, #111927, #2c3e50);
-      color: #f4f4f4;
-      line-height: 1.6;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
     }
 
     header {
-      height: 100vh;
-      background: linear-gradient(to right, #141E30, #243B55);
-      color: white;
+      height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 2rem;
-      position: relative;
-      overflow: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     header h1 {
-      font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
-      position: relative;
-      animation: glitch 2s infinite;
-    }
-
-    @keyframes glitch {
-      0% {
-        text-shadow: 2px 2px #ff00c8, -2px -2px #00ffe1;
-      }
-      20% {
-        text-shadow: -2px 2px #ff00c8, 2px -2px #00ffe1;
-      }
-      40% {
-        text-shadow: 2px -2px #ff00c8, -2px 2px #00ffe1;
-      }
-      60% {
-        text-shadow: -2px -2px #ff00c8, 2px 2px #00ffe1;
-      }
-      80% {
-        text-shadow: 2px 2px #ff00c8, -2px -2px #00ffe1;
-      }
-      100% {
-        text-shadow: none;
-      }
+      font-weight: 700;
     }
 
     header p {
@@ -69,16 +53,10 @@
       margin-top: 1rem;
     }
 
-    .hero-img {
-      max-width: 500px;
-      margin-top: 2rem;
-      opacity: 0.95;
-    }
-
     .btn {
       margin-top: 2rem;
-      background: #fff;
-      color: #243B55;
+      background: #ffffff;
+      color: #2c5364;
       padding: 0.8rem 1.5rem;
       font-weight: bold;
       border: none;
@@ -112,8 +90,8 @@
     }
 
     footer {
-      background: #111;
-      color: #aaa;
+      background: #0d1b2a;
+      color: #ccc;
       text-align: center;
       padding: 1.5rem;
       font-size: 0.9rem;
@@ -134,9 +112,6 @@
       header h1 {
         font-size: 2rem;
       }
-      .hero-img {
-        width: 90%;
-      }
     }
   </style>
 </head>
@@ -145,14 +120,13 @@
   <header>
     <h1>Johar InfraTech</h1>
     <p>Empowering Web3 & Compute Innovation</p>
-    <img class="hero-img" src="https://images.unsplash.com/photo-1581090700227-1e8e8cb02c8b?auto=format&fit=crop&w=800&q=60" alt="AI Compute Illustration"/>
-    <a href="#about" class="btn">Explore More</a>
+    <a href="#about" class="btn">Learn More</a>
   </header>
 
   <section id="about">
     <h2><span class="icon" data-lucide="info"></span> About Us</h2>
     <p>
-      Johar InfraTech is a tech-focused MSME in India. We run compute nodes for decentralized platforms like Gensyn, Aztec, and Drosera. Our aim is to power AI/ML development and Web3 innovations with reliable infrastructure.
+      Johar InfraTech is a registered MSME in India specializing in node infrastructure and compute services. We support global decentralized networks like Gensyn, Aztec, Drosera, and Blockcast, and enable scalable AI/ML & Web3 deployment.
     </p>
   </section>
 
@@ -161,7 +135,7 @@
     <ul>
       <li>⚙️ Node Infrastructure (Gensyn, Aztec, Drosera, Blockcast)</li>
       <li>🚀 Compute Power Rentals (Coming Soon)</li>
-      <li>🧠 Web3 & AI Project Hosting</li>
+      <li>🧠 AI/ML Support & Web3 Integration</li>
     </ul>
   </section>
 
@@ -181,6 +155,7 @@
 
 </body>
 </html>
+
 
 
 
