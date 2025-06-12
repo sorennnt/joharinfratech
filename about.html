@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Johar InfraTech | Decentralized Compute & Web3 Infrastructure</title>
+  <title>About Us | Johar InfraTech</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -14,27 +13,16 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
       color: #e4e4e4;
       line-height: 1.7;
-    }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    a {
-      color: #00b4d8;
-      text-decoration: none;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     nav {
       background: #1a1a2e;
       padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -43,79 +31,55 @@
       margin-left: 1rem;
       color: #00b4d8;
       transition: color 0.3s ease;
+      text-decoration: none;
     }
     nav a:hover {
       color: #90e0ef;
     }
     header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
       text-align: center;
-      padding: 0 2rem;
+      padding: 4rem 2rem 2rem;
     }
     header h1 {
-      font-size: 4rem;
-      animation: fadeInDown 1s ease forwards;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
     }
-    header p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      animation: fadeInUp 1.2s ease forwards;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
+    main {
+      padding: 2rem;
+      max-width: 900px;
       margin: auto;
     }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #90e0ef;
-      border-left: 4px solid #00b4d8;
-      padding-left: 1rem;
-    }
-    .card {
-      background: #1c1c2c;
+    section {
+      background: rgba(0,0,0,0.3);
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
       margin-bottom: 2rem;
-      transition: transform 0.3s;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .back-home {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background: #00b4d8;
-      color: #fff;
-      border-radius: 25px;
-      font-weight: bold;
-      text-align: center;
-      transition: background 0.3s ease;
-    }
-    .back-home:hover {
-      background: #0077b6;
+    h2 {
+      color: #90e0ef;
+      margin-bottom: 1rem;
     }
     footer {
       background: #111;
-      text-align: center;
-      padding: 2rem;
       color: #ccc;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: auto;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn-home {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #00b4d8;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn-home:hover {
+      background: #90e0ef;
     }
   </style>
 </head>
@@ -123,25 +87,36 @@
   <nav>
     <div><strong>Johar InfraTech</strong></div>
     <div>
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/services/">Services</a>
-      <a href="/projects/">Projects</a>
-      <a href="/contact/">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
   <header>
-    <h1>Johar InfraTech</h1>
-    <p>Decentralized Compute, Powered by Innovation</p>
+    <h1>About Johar InfraTech</h1>
   </header>
 
-  <section>
-    <h2>Welcome</h2>
-    <div class="card">
-      <p>Welcome to Johar InfraTech — a next-gen infrastructure partner for the decentralized world. From AI/ML compute services to powering leading Web3 protocols, we're building tomorrow’s backbone today.</p>
-    </div>
-  </section>
+  <main>
+    <section>
+      <h2>Who We Are</h2>
+      <p>Johar InfraTech is a forward-looking Indian MSME delivering decentralized computing infrastructure for AI, ML, and Web3 technologies. We operate and maintain nodes for networks such as Gensyn, Aztec, Drosera, and more.</p>
+    </section>
+
+    <section>
+      <h2>Our Mission</h2>
+      <p>To make high-performance computing accessible for everyone and to support global innovation through decentralized networks and infrastructure services.</p>
+    </section>
+
+    <section>
+      <h2>Our Vision</h2>
+      <p>We envision a decentralized future powered by trustless computation, scalable infrastructure, and inclusive technology that empowers every innovator globally.</p>
+    </section>
+
+    <a href="index.html" class="btn-home">← Back to Home</a>
+  </main>
 
   <footer>
     <p>© 2025 Johar InfraTech • MSME Registered • info@joharinfratech.in</p>
