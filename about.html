@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Johar InfraTech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <title>About | Johar InfraTech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -12,70 +12,79 @@
       padding: 0;
     }
     body {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
       background-size: 600% 600%;
-      animation: gradientShift 15s ease infinite;
-      color: #e4e4e4;
-      line-height: 1.7;
+      animation: gradientBG 20s ease infinite;
+      color: #f0f0f0;
+      line-height: 1.6;
     }
     nav {
-      background: rgba(0, 0, 0, 0.8);
+      background: #111;
       padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
-      margin-left: 1rem;
-      color: #00ffff;
+      margin-left: 1.5rem;
+      color: #00bcd4;
       text-decoration: none;
+      font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #ff8c00;
+      color: #76e4f7;
     }
     header {
       text-align: center;
-      padding: 4rem 2rem 2rem;
-      color: #00ffff;
-      font-size: 2rem;
-      text-shadow: 1px 1px 10px #00ffff;
+      padding: 5rem 2rem 2rem;
+      animation: fadeIn 2s ease-in-out;
     }
-    section {
-      padding: 2rem;
+    header h1 {
+      font-size: 3rem;
+      color: #00bcd4;
+      text-shadow: 2px 2px 10px #000;
+    }
+    .content {
       max-width: 1000px;
       margin: auto;
-    }
-    h2 {
-      font-size: 2rem;
-      color: #ff8c00;
-      margin-bottom: 1rem;
+      padding: 2rem;
+      animation: slideUp 1.5s ease-in-out;
     }
     .card {
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 15px;
-      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #00bcd4;
+      padding: 1.5rem;
       margin-bottom: 2rem;
-      box-shadow: 0 0 20px rgba(0,255,255,0.3);
-      animation: fadeInUp 1s ease-in-out;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     footer {
       background: #000;
-      color: #ccc;
+      color: #aaa;
       text-align: center;
       padding: 2rem;
+      margin-top: 3rem;
     }
-    @keyframes gradientShift {
+    @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
@@ -93,23 +102,28 @@
   </nav>
 
   <header>
-    About Johar InfraTech
+    <h1>About Johar InfraTech</h1>
   </header>
 
-  <section>
+  <div class="content">
     <div class="card">
       <h2>Our Mission</h2>
-      <p>Johar InfraTech was founded to pioneer digital infrastructure in India. We provide decentralized compute power to networks like Gensyn, Aztec, and Blockcast while also supporting AI/ML innovations.</p>
+      <p>We aim to democratize compute power and make decentralized technologies more accessible through robust infrastructure and scalable node operations.</p>
     </div>
     <div class="card">
       <h2>Our Vision</h2>
-      <p>We envision an inclusive, open internet powered by distributed computing. Our long-term goal is to become India’s leading provider of compute resources and Web3 solutions.</p>
+      <p>To become the leading compute partner for decentralized AI and Web3 platforms by offering reliable, secure, and optimized node services.</p>
     </div>
     <div class="card">
-      <h2>Why Choose Us</h2>
-      <p>From affordable compute offerings to 24/7 uptime, we offer reliability, scalability, and compliance with India’s MSME framework.</p>
+      <h2>Our Strengths</h2>
+      <ul>
+        <li>Cutting-edge hardware setup</li>
+        <li>Deep understanding of blockchain protocols</li>
+        <li>24/7 uptime and performance monitoring</li>
+        <li>Registered MSME with operational transparency</li>
+      </ul>
     </div>
-  </section>
+  </div>
 
   <footer>
     <p>© 2025 Johar InfraTech • MSME Registered • info@joharinfratech.in</p>
