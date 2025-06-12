@@ -6,35 +6,140 @@
   <title>Contact | Johar InfraTech</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #0e1117;
-      color: #e4e4e4;
-      padding: 2rem;
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      color: #fff;
+      line-height: 1.6;
     }
-    .container {
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 1rem;
+      color: #90e0ef;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00b4d8;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+    }
+    section {
       max-width: 800px;
       margin: auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
-    h1 {
-      color: #00b4d8;
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
     }
-    p {
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
       margin-bottom: 1rem;
     }
-    a {
-      color: #00b4d8;
+    button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      background: #00b4d8;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #0096c7;
+    }
+    .back-home {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .back-home a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border-radius: 5px;
       text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .back-home a:hover {
+      background: rgba(255,255,255,0.4);
+      transform: translateY(-2px);
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: #ccc;
+      padding: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <nav>
+    <div><strong>Johar InfraTech</strong></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <header>
     <h1>Contact Us</h1>
-    <p>Email: <a href="mailto:info@joharinfratech.in">info@joharinfratech.in</a></p>
-    <p>Telegram: Not Available</p>
-    <p><a href="index.html">← Back to Home</a></p>
-  </div>
+  </header>
+
+  <section>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Johar InfraTech • MSME Registered • info@joharinfratech.in</p>
+  </footer>
 </body>
 </html>
