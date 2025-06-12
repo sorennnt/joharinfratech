@@ -4,57 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Johar InfraTech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
+    /* Reset & base styling */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #d1c4e9);
-      color: #222;
+      background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+      color: #333;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     header {
       height: 100vh;
-      background: linear-gradient(120deg, #7e57c2 30%, #29b6f6 100%);
+      background: linear-gradient(to right, #7b1fa2, #2196f3);
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       text-align: center;
       padding: 2rem;
-      animation: fadeIn 2s ease-in-out;
+      position: relative;
+      overflow: hidden;
     }
 
     header h1 {
-      font-size: 3.2rem;
-      margin-bottom: 0.8rem;
-      animation: slideDown 1s ease-out;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+      border-right: 3px solid white;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
     }
 
     header p {
       font-size: 1.3rem;
-      opacity: 0.95;
-      animation: fadeIn 2.5s ease-in;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+      animation-delay: 3s;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      background: #fff;
+      color: #7b1fa2;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #f1f1f1;
     }
 
     section {
       padding: 3rem 1rem;
       max-width: 1000px;
       margin: auto;
-      animation: slideUp 1s ease-out;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeUp 1s forwards;
     }
 
+    section:nth-of-type(2) { animation-delay: 1s; }
+    section:nth-of-type(3) { animation-delay: 2s; }
+    section:nth-of-type(4) { animation-delay: 3s; }
+
     h2 {
-      color: #4a148c;
+      color: #6a1b9a;
       margin-bottom: 1rem;
-      font-weight: 600;
     }
 
     ul {
@@ -66,12 +106,11 @@
     }
 
     footer {
-      background: #212121;
-      color: #ccc;
+      background: #1c1c1c;
+      color: #bbb;
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       font-size: 0.9rem;
-      animation: fadeIn 2s ease-in;
     }
 
     .contact a {
@@ -79,60 +118,61 @@
       text-decoration: none;
     }
 
+    .icon {
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       header p {
         font-size: 1rem;
       }
     }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideUp {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <div>
-      <h1>Johar InfraTech</h1>
-      <p>Empowering Web3 & Compute Innovation</p>
-    </div>
+    <h1>Johar InfraTech</h1>
+    <p>Empowering Web3 & Compute Innovation</p>
+    <a href="#about" class="btn">Explore More</a>
   </header>
 
-  <section>
-    <h2>About Us</h2>
+  <section id="about">
+    <h2><span class="icon" data-lucide="info"></span> About Us</h2>
     <p>
-      Johar InfraTech is a technology-focused MSME based in India. We specialize in running compute nodes for global decentralized networks such as Gensyn, Drosera, and Aztec. Our infrastructure supports AI/ML experimentation and scalable Web3 services.
+      Johar InfraTech is a technology-driven MSME based in India. We specialize in running compute nodes for global decentralized networks like Gensyn, Drosera, and Aztec. Our mission is to provide reliable compute services for AI/ML research and Web3 innovation.
     </p>
   </section>
 
   <section>
-    <h2>Services</h2>
+    <h2><span class="icon" data-lucide="server"></span> Services</h2>
     <ul>
-      <li>Node Infrastructure (Gensyn, Aztec, Blockcast, Drosera)</li>
-      <li>Compute Power Rental (Coming Soon)</li>
-      <li>Web3 and AI Project Support</li>
+      <li>⚙️ Node Infrastructure (Gensyn, Aztec, Drosera, Blockcast)</li>
+      <li>🚀 Compute Power Rentals (Coming Soon)</li>
+      <li>🔗 Web3 & AI Project Hosting</li>
     </ul>
   </section>
 
   <section class="contact">
-    <h2>Contact</h2>
+    <h2><span class="icon" data-lucide="mail"></span> Contact</h2>
     <p>Email: <a href="mailto:info@joharinfratech.in">info@joharinfratech.in</a></p>
     <p>Telegram: N/A</p>
   </section>
@@ -140,6 +180,10 @@
   <footer>
     <p>MSME Registered • Copyright © 2025 Johar InfraTech</p>
   </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
