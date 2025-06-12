@@ -4,60 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Johar InfraTech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
     body {
-      font-family: 'Rajdhani', sans-serif;
-      background: linear-gradient(270deg, #03045e, #0077b6, #00b4d8, #90e0ef);
-      background-size: 800% 800%;
-      animation: gradientFlow 15s ease infinite;
-      color: #fff;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      color: #f1f1f1;
+      background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    @keyframes gradientFlow {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     header {
+      padding: 2rem;
       text-align: center;
-      padding: 4rem 2rem 2rem;
     }
     header h1 {
-      font-size: 3.5rem;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 1.5s ease-out;
     }
-    section {
-      max-width: 1000px;
-      margin: auto;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .content {
+      flex: 1;
       padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 2s ease-out;
     }
     .card {
       background: rgba(0, 0, 0, 0.4);
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 12px;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
     }
     .card:hover {
-      transform: translateY(-6px);
-    }
-    h2 {
-      color: #fff;
-      margin-bottom: 1rem;
-      font-size: 2rem;
+      transform: translateY(-5px);
     }
     footer {
       text-align: center;
-      padding: 2rem;
-      background: rgba(0,0,0,0.2);
-      margin-top: 2rem;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .back-home {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #00c6ff;
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .back-home:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 198, 255, 0.5);
     }
   </style>
 </head>
@@ -65,22 +84,23 @@
   <header>
     <h1>Our Services</h1>
   </header>
-  <section>
+  <div class="content">
     <div class="card">
-      <h2>Node Infrastructure</h2>
-      <p>We run nodes for Gensyn, Aztec, Blockcast, Drosera and other decentralized networks ensuring high uptime and optimal performance.</p>
+      <h2>Compute Node Operations</h2>
+      <p>We run compute nodes for top decentralized networks like Gensyn, Aztec, Blockcast, and Drosera with robust uptime and performance.</p>
     </div>
     <div class="card">
-      <h2>Compute Power Rental</h2>
-      <p>We offer GPU-based compute resources ideal for ML/AI tasks and blockchain computation. (Coming Soon)</p>
+      <h2>Web3 & AI Infrastructure</h2>
+      <p>Our systems are optimized for AI/ML workflows and Web3 development tools to help scale your decentralized projects.</p>
     </div>
     <div class="card">
-      <h2>Web3 and AI Support</h2>
-      <p>Our team provides assistance to startups and developers building decentralized applications, AI tools and infrastructure setups.</p>
+      <h2>Custom Hosting Solutions</h2>
+      <p>We offer flexible VPS and dedicated hosting options tailored for high-compute tasks in AI, blockchain, and more.</p>
     </div>
-  </section>
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
   <footer>
-    <p>© 2025 Johar InfraTech | info@joharinfratech.in</p>
+    <p>© 2025 Johar InfraTech • info@joharinfratech.in</p>
   </footer>
 </body>
 </html>
